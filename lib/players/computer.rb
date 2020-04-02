@@ -20,7 +20,7 @@ module Players
       #2) b) false check next combination
       #3) No combination was found -> random number
       
-      #collects all teh combinations that are close to winning/loosing
+      #collects all the combinations that are close to winning/loosing
       all_combos_with_two_out_of_three = WIN_COMBINATIONS.select {|combo| combo.count {|cell| board.cells[cell] == " "} == 1 && matching_two_out_of_three?(board, combo)}
 
       #Figures out if one of those combinations has a winning move for computer
