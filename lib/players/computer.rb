@@ -35,7 +35,8 @@ module Players
         return all_combos_with_two_out_of_three[rand(all_combos_with_two_out_of_three.size - 1)].detect{|cell| board.cells[cell] == " "} + 1
       end
     
-      rand(8) + 1  #Pick random move if no combintations
+      #rand(8) + 1  #Pick random move if no combintations
+      board.random_empty_cell_index
     end
   
     def matching_two_out_of_three?(board, combo)
