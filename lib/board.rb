@@ -40,4 +40,16 @@ class Board
     def update(cell_number, player)
         @cells[cell_number.to_i - 1] = player.token
     end
+    
+    def random_empty_cell_index
+        array_of_index = []
+        index = 1
+        while index <= 9
+            if !taken?(index)
+                array_of_index.push(index)
+            end
+            index += 1
+        end
+        array_of_index.sample
+    end
 end
